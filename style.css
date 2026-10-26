@@ -1,0 +1,265 @@
+
+:root {
+  --bg: #f5f7fa;
+  --paper: #ffffff;
+  --ink: #192b3c;
+  --muted: #657487;
+  --line: #e1e8ef;
+  --accent: #2765b0;
+  --accent-soft: #eaf2ff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  line-height: 1.7;
+}
+
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 46px 24px 24px;
+}
+
+.hero {
+  padding: 55px 52px;
+  background: #183e68;
+  color: white;
+  border-radius: 22px;
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #b9d9ff;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: .16em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(29px, 4.7vw, 46px);
+  letter-spacing: -.04em;
+  line-height: 1.25;
+}
+
+.lead {
+  margin: 13px 0 0;
+  color: #cce3ff;
+  font-size: 19px;
+  font-weight: 650;
+}
+
+.intro {
+  margin: 25px 0 0;
+  max-width: 680px;
+  color: #e5effb;
+  font-size: 15px;
+}
+
+.panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 33px 38px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 28px rgba(25, 43, 60, .035);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 13px;
+  margin-bottom: 21px;
+}
+
+.section-no {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 23px;
+  letter-spacing: -.025em;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 6px 0 25px;
+  letter-spacing: -.02em;
+}
+
+h4 {
+  font-size: 15px;
+  margin: 0 0 6px;
+}
+
+p { margin: 0 0 12px; }
+
+.goals {
+  padding-left: 21px;
+  margin: 0;
+}
+
+.goals li { padding: 4px 0; }
+
+.date {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.star-grid {
+  display: grid;
+  gap: 13px;
+}
+
+.star-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 17px 18px;
+}
+
+.star-letter {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 11px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.star-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+code {
+  background: #edf2f7;
+  border-radius: 4px;
+  padding: 2px 5px;
+  font-family: ui-monospace, SFMono-Regular,
+    Menlo, monospace;
+  font-size: .92em;
+}
+
+.note {
+  margin: 20px 0 0;
+  padding-left: 12px;
+  border-left: 3px solid #b8c9dc;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.repo-placeholder {
+  display: inline-block;
+  border: 1px dashed #b7c9df;
+  background: #f5f9ff;
+  color: #526f91;
+  border-radius: 9px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 650;
+  margin: 5px 0 0;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.timeline {
+  border-left: 2px solid #c8dbf1;
+  padding-left: 19px;
+  margin-left: 5px;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 115px 1fr;
+  gap: 14px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+time {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.timeline-item strong { font-size: 14px; }
+
+.timeline-item p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  padding: 20px 0 12px;
+}
+
+@media (max-width: 640px) {
+  .page { padding: 15px; }
+
+  .hero {
+    padding: 32px 25px;
+    border-radius: 15px;
+  }
+
+  .panel {
+    padding: 23px 20px;
+    border-radius: 14px;
+  }
+
+  .lead { font-size: 16px; }
+  .intro { font-size: 14px; }
+
+  .star-item {
+    padding: 13px;
+    gap: 11px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
