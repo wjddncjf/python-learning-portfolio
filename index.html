@@ -47,8 +47,8 @@
 
         <!-- 2026.10.27 Python -->
         <article>
-          <p class="date">2026.10.27 · Python · Network-002</p>
-          <h3>조건문을 활용한 로그 상태 판단과 학습 기록 관리</h3>
+          <p class="date">2026.10.27 · Python · Network-002 / Network-004</p>
+          <h3>조건문과 반복문을 활용한 로그 판단 및 데이터 집계</h3>
 
           <div class="star-grid">
             <article class="star-item">
@@ -59,6 +59,8 @@
                   Python의 if, else 조건문을 배우면서
                   로그의 상태와 기록 개수에 따라
                   서로 다른 결과를 출력하는 과제를 진행했습니다.
+                  이후 for 반복문을 학습하며 여러 값에
+                  같은 조건을 적용하는 문제를 풀었습니다.
                 </p>
               </div>
             </article>
@@ -68,9 +70,11 @@
               <div>
                 <h4>Task · 과제</h4>
                 <p>
-                  FAIL 기록을 구별하고,
-                  기록 개수가 기준값 이상인지 판단하는
-                  조건문을 직접 작성하고자 했습니다.
+                  Network-002에서는 FAIL 기록을 구별하고
+                  기록 개수가 기준값 이상인지 판단하고자 했습니다.
+                  Network-004에서는 리스트에서 3 이상인 값만 찾고,
+                  조건에 맞는 값의 개수와 합계를
+                  각각 계산하고자 했습니다.
                 </p>
               </div>
             </article>
@@ -80,13 +84,22 @@
               <div>
                 <h4>Action · 행동</h4>
                 <p>
-                  if, else와 비교 연산자를 활용해 코드를 작성했습니다.
+                  Network-002에서는 if, else와 비교 연산자를 활용해
+                  코드를 작성했습니다.
                   처음에는 여러 문제를 하나의 Python 파일에 작성했지만,
                   과제 요구사항을 다시 확인하고 F1과 F2를
                   각각의 파일로 분리했습니다.
-                  이후 AI의 도움을 받아 Git 명령어의 역할을 이해하고,
-                  변경된 파일을 직접 확인하며 GitHub에 커밋하고
-                  푸시했습니다.
+                </p>
+                <p>
+                  Network-004에서는 for 반복문과 if 조건문을
+                  함께 사용해 F1과 F2 코드를 작성했습니다.
+                  리스트의 값 중 3 이상인 숫자의 개수와 합계를 구하고,
+                  첫 번째 값을 0에서 7로 변경한 뒤 다시 실행했습니다.
+                </p>
+                <p>
+                  AI에게 코드의 실행 흐름과 Git 명령어의 역할을 질문하고,
+                  변경된 파일과 학습 기록을 직접 확인한 후
+                  GitHub에 커밋하고 푸시했습니다.
                 </p>
               </div>
             </article>
@@ -96,11 +109,20 @@
               <div>
                 <h4>Result · 결과</h4>
                 <p>
-                  F1과 F2 코드를 별도 파일로 정리하고,
+                  Network-002의 F1과 F2 코드를 별도 파일로 정리하고,
                   학습 기록과 함께 GitHub에 게시했습니다.
-                  git log 명령어로 로컬과 원격 저장소가
-                  같은 커밋을 가리키는 것을 확인했으며,
-                  GitHub 웹사이트에서 세 파일을 직접 확인했습니다.
+                  Git 명령어와 GitHub 웹사이트를 통해
+                  업로드한 파일을 확인했습니다.
+                </p>
+                <p>
+                  Network-004에서는 counts의 첫 번째 값을
+                  0에서 7로 변경한 결과,
+                  3 이상인 숫자가 7, 4, 5로 총 3개이고
+                  합계가 16이라는 것을 확인했습니다.
+                  실제 출력값은 <code>3 16</code>이었습니다.
+                  이 과정에서 반복문으로 여러 값을 검사하고,
+                  조건문으로 필요한 값만 선택해
+                  개수와 합계를 계산하는 방법을 익혔습니다.
                 </p>
               </div>
             </article>
@@ -108,7 +130,8 @@
 
           <p class="note">
             학습 기록:
-            <a href="https://github.com/wjddncjf/security-agent-toolkit">
+            <a href="https://github.com/wjddncjf/security-agent-toolkit"
+               target="_blank" rel="noopener noreferrer">
               GitHub에서 Python 실습 코드 확인하기
             </a>
           </p>
@@ -211,9 +234,12 @@
           <article class="timeline-item">
             <time datetime="2026-10-27">2026.10.27</time>
             <div>
-              <strong>Python 조건문과 GitHub 학습 기록</strong>
+              <strong>Python 조건문·반복문과 GitHub 학습 기록</strong>
               <p>
-                if, else 조건문 작성 · F1/F2 파일 분리 ·
+                Network-002 조건문 작성 및 F1/F2 파일 분리 ·
+                Network-004 for 반복문과 if 조건문 활용 ·
+                3 이상인 값의 개수와 합계 계산 ·
+                0을 7로 변경해 출력 3 16 확인 ·
                 Git 커밋 및 푸시 · 위 STAR 사례 참고
               </p>
             </div>
