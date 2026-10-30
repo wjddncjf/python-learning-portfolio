@@ -45,6 +45,91 @@
           <h2 id="story-title">STAR 학습 사례</h2>
         </div>
 
+        <!-- 2026.10.30 Python -->
+        <article>
+          <p class="date">2026.10.30 · Python · 파일 입출력 및 예외 처리</p>
+          <h3>Python 파일 입출력과 로그 데이터 처리</h3>
+
+          <div class="star-grid">
+            <article class="star-item">
+              <span class="star-letter">S</span>
+              <div>
+                <h4>Situation · 상황</h4>
+                <p>
+                  SKT ALEPH 교육 과정에서 Python을 활용해
+                  코드 외부의 파일을 생성하고 읽는 방법을
+                  학습했습니다. 특히 텍스트 파일과 CSV 형식의
+                  로그를 다루면서 파일 입출력과 예외 처리의
+                  기본적인 동작을 실습했습니다.
+                </p>
+              </div>
+            </article>
+
+            <article class="star-item">
+              <span class="star-letter">T</span>
+              <div>
+                <h4>Task · 과제</h4>
+                <p>
+                  파일을 생성하고 내용을 기록한 뒤 다시 읽어
+                  결과를 확인하는 것이 목표였습니다.
+                  또한 기존 파일에 내용을 추가하고,
+                  로그에서 특정 사용자의 기록만 검색하며,
+                  존재하지 않는 파일을 열었을 때 발생하는
+                  오류를 처리하는 과제를 수행했습니다.
+                </p>
+              </div>
+            </article>
+
+            <article class="star-item">
+              <span class="star-letter">A</span>
+              <div>
+                <h4>Action · 행동</h4>
+                <p>
+                  with open()을 사용해 파일을 열고,
+                  w, a 모드로 내용을 쓰거나 추가했습니다.
+                  read()와 for 반복문으로 파일을 읽고,
+                  strip()으로 줄바꿈 문자를 제거했습니다.
+                </p>
+                <p>
+                  sample_logs.csv에 6개의 로그를 작성하고,
+                  in 연산자를 이용해 park03이 포함된 기록만
+                  검색했습니다. F1에서는 check.txt 파일에
+                  점검시작과 점검 끝을 기록한 뒤 다시 읽었습니다.
+                </p>
+                <p>
+                  F2에서는 존재하지 않는 not-provided.txt를
+                  열도록 코드를 작성하고, try-except로
+                  FileNotFoundError를 처리했습니다.
+                  실습 과정에서 AI의 도움으로 코드 오류 원인과
+                  파일 입출력 개념을 확인하고, 직접 코드를
+                  수정하고 실행 결과를 검증했습니다.
+                </p>
+              </div>
+            </article>
+
+            <article class="star-item">
+              <span class="star-letter">R</span>
+              <div>
+                <h4>Result · 결과</h4>
+                <p>
+                  파일 생성과 읽기, 내용 추가가 정상적으로
+                  동작하는 것을 확인했습니다.
+                  총 6개의 로그 중 park03이 포함된
+                  2개의 기록을 선택해 출력했습니다.
+                </p>
+                <p>
+                  check.txt에 작성한 점검 기록을 다시 읽어
+                  확인했으며, 없는 파일을 열었을 때
+                  '파일 위치를 확인하세요'라는 안내 문구가
+                  정상 출력되는 것을 확인했습니다.
+                  이를 통해 파일 입출력과 예외 처리를
+                  함께 활용하는 방법을 익혔습니다.
+                </p>
+              </div>
+            </article>
+          </div>
+        </article>
+
 <!-- 2026.10.29 Python -->
 <article>
   <p class="date">2026.10.29 · Python · VS Code 환경 설정 및 예외 처리</p>
@@ -400,6 +485,24 @@
         </p>
 
         <div class="timeline">
+
+          <article class="timeline-item">
+            <time datetime="2026-10-30">2026.10.30</time>
+            <div>
+              <strong>Python 파일 입출력과 로그 데이터 처리</strong>
+              <p>
+                with open()을 활용한 파일 생성 및 읽기 ·
+                w/a 모드로 파일 쓰기와 내용 추가 ·
+                CSV 로그 6건 읽기 ·
+                park03 포함 로그 2건 검색 ·
+                F1 점검 결과 파일 작성 및 확인 ·
+                F2 FileNotFoundError 예외 처리 ·
+                GitHub 학습 기록 업로드 ·
+                위 STAR 사례 참고
+              </p>
+            </div>
+          </article>
+
 
 <article class="timeline-item">
   <time datetime="2026-10-29">2026.10.29</time>
