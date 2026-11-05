@@ -45,6 +45,54 @@
           <h2 id="story-title">STAR 학습 사례</h2>
         </div>
 
+        <!-- 2026.11.05 Python functions and file output -->
+        <article>
+          <p class="date">2026.11.05 · Python · 기본 매개변수와 파일 출력</p>
+          <h3>실패 횟수 판별 기준을 바꾸고 함수 결과를 파일에 저장하기</h3>
+
+          <div class="star-grid">
+            <article class="star-item">
+              <span class="star-letter">S</span>
+              <div>
+                <h4>Situation · 상황</h4>
+                <p>Python 함수 실습에서 같은 로그인 실패 기록에 서로 다른 기준을 적용하고, 함수가 반환한 값을 파일 작성에 활용했습니다.</p>
+              </div>
+            </article>
+
+            <article class="star-item">
+              <span class="star-letter">T</span>
+              <div>
+                <h4>Task · 과제</h4>
+                <p>호출할 때 실패 횟수 기준을 바꿀 수 있도록 함수를 작성하고, 3 이상인 숫자를 골라 반환하는 함수와 합계 문자열을 파일에 저장하는 코드를 구현하는 것이 과제였습니다.</p>
+              </div>
+            </article>
+
+            <article class="star-item">
+              <span class="star-letter">A</span>
+              <div>
+                <h4>Action · 행동</h4>
+                <p><code>threshold=2</code>를 기본값으로 두고, <code>Counter</code>로 사용자별 실패 횟수를 집계한 뒤 기준값 2와 5의 결과를 비교했습니다. 숫자 필터에는 일반 리스트와 빈 리스트를 전달했습니다.</p>
+                <p><code>summarize()</code>에 숫자를 전달할 때 발생한 오류는 입력을 <code>[2, 3]</code>으로 묶어 해결했습니다. 반환된 문자열은 함수 밖에서 <code>write()</code>로 저장했습니다.</p>
+              </div>
+            </article>
+
+            <article class="star-item">
+              <span class="star-letter">R</span>
+              <div>
+                <h4>Result · 결과</h4>
+                <p>기본 기준값 2에서는 <code>kim01</code>이 검토 대상이었고, 기준값 5에서는 대상이 없었습니다. 숫자 필터는 <code>[4, 5]</code>와 <code>[]</code>를 각각 반환했고, <code>report.txt</code>에는 <code>합계 5</code>가 기록됐습니다.</p>
+              </div>
+            </article>
+          </div>
+
+          <p class="note">
+            <a href="https://github.com/wjddncjf/security-agent-toolkit/blob/main/docs/2026-11-05.md"
+               target="_blank" rel="noopener noreferrer">
+              GitHub에서 11월 5일 Python 실습 확인하기
+            </a>
+          </p>
+        </article>
+
         <!-- 2026.11.04 Python functions -->
         <article>
           <p class="date">2026.11.04 · Python · 함수 정의와 결과 반환</p>
@@ -635,6 +683,19 @@
         </p>
 
         <div class="timeline">
+
+          <article class="timeline-item">
+            <time datetime="2026-11-05">2026.11.05</time>
+            <div>
+              <strong>Python 기본 매개변수와 함수 결과 저장</strong>
+              <p>
+                기본 기준값과 전달한 기준값 비교 ·
+                <code>Counter</code>로 사용자별 실패 횟수 집계 ·
+                빈 리스트 처리 · 함수 반환값을 <code>report.txt</code>에 저장 ·
+                위 STAR 사례 참고
+              </p>
+            </div>
+          </article>
 
           <article class="timeline-item">
             <time datetime="2026-11-04">2026.11.04</time>
