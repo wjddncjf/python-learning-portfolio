@@ -47,15 +47,15 @@
 
         <!-- 2026.11.05 Python functions and file output -->
         <article>
-          <p class="date">2026.11.05 · Python · 기본 매개변수와 파일 출력</p>
-          <h3>실패 횟수 판별 기준을 바꾸고 함수 결과를 파일에 저장하기</h3>
+          <p class="date">2026.11.05 · Python / 터미널 · 함수 반환값과 로그 검색</p>
+          <h3>실패 기록을 조건으로 골라내고 함수 결과를 파일에 저장하기</h3>
 
           <div class="star-grid">
             <article class="star-item">
               <span class="star-letter">S</span>
               <div>
                 <h4>Situation · 상황</h4>
-                <p>Python 함수 실습에서 같은 로그인 실패 기록에 서로 다른 기준을 적용하고, 함수가 반환한 값을 파일 작성에 활용했습니다.</p>
+                <p>Python으로 로그인 실패 기록을 집계하는 실습과 함께, 터미널에서 로그 파일을 열고 필요한 줄을 찾는 방법을 학습했습니다.</p>
               </div>
             </article>
 
@@ -63,7 +63,7 @@
               <span class="star-letter">T</span>
               <div>
                 <h4>Task · 과제</h4>
-                <p>호출할 때 실패 횟수 기준을 바꿀 수 있도록 함수를 작성하고, 3 이상인 숫자를 골라 반환하는 함수와 합계 문자열을 파일에 저장하는 코드를 구현하는 것이 과제였습니다.</p>
+                <p>호출할 때 실패 횟수 기준을 바꾸고, 리스트에서 3 이상인 값을 골라 반환하는 함수를 작성했습니다. 합계 문자열을 텍스트 파일에 저장하고, 로그에서는 패턴과 일치하는 줄과 줄 수를 확인하는 방법을 익혔습니다.</p>
               </div>
             </article>
 
@@ -71,8 +71,9 @@
               <span class="star-letter">A</span>
               <div>
                 <h4>Action · 행동</h4>
-                <p><code>threshold=2</code>를 기본값으로 두고, <code>Counter</code>로 사용자별 실패 횟수를 집계한 뒤 기준값 2와 5의 결과를 비교했습니다. 숫자 필터에는 일반 리스트와 빈 리스트를 전달했습니다.</p>
-                <p><code>summarize()</code>에 숫자를 전달할 때 발생한 오류는 입력을 <code>[2, 3]</code>으로 묶어 해결했습니다. 반환된 문자열은 함수 밖에서 <code>write()</code>로 저장했습니다.</p>
+                <p>F1에서는 <code>needs_review()</code>에 기본값 <code>threshold=2</code>를 두고, 기준 인자를 생략한 호출과 <code>5</code>를 전달한 호출을 비교했습니다. <code>find_suspects()</code>에서는 <code>Counter</code>로 사용자별 실패 횟수를 집계한 뒤 조건에 맞는 사용자만 새 리스트에 담았습니다. <code>filter_three_or_more()</code>에는 일반 리스트와 빈 리스트를 각각 전달했습니다.</p>
+                <p>F2에서는 <code>summarize()</code>가 리스트 하나를 받도록 작성하고, 숫자를 대괄호로 묶지 않아 발생한 오류를 <code>summarize([2, 3])</code>으로 수정했습니다. 함수에서 <code>sum()</code>으로 계산한 합계를 문자열로 반환하고, 함수 밖에서 그 값을 <code>result</code>에 저장해 화면에 출력했습니다. 같은 값을 <code>with open('report.txt', 'w')</code>로 연 파일에 <code>write()</code>로 기록했습니다.</p>
+                <p>터미널에서는 <code>cat sample.log</code>에 출력이 없자 파일을 저장하고 <code>ls -l</code>로 크기를 확인한 뒤 다시 열었습니다. <code>grep -n</code>은 패턴과 일치하는 줄에 줄 번호를 붙이고, <code>grep -c</code>는 일치하는 줄의 수를 보여 준다는 점을 학습했습니다.</p>
               </div>
             </article>
 
@@ -80,16 +81,24 @@
               <span class="star-letter">R</span>
               <div>
                 <h4>Result · 결과</h4>
-                <p>기본 기준값 2에서는 <code>kim01</code>이 검토 대상이었고, 기준값 5에서는 대상이 없었습니다. 숫자 필터는 <code>[4, 5]</code>와 <code>[]</code>를 각각 반환했고, <code>report.txt</code>에는 <code>합계 5</code>가 기록됐습니다.</p>
+                <p>실패 횟수 3은 기본 기준값 2에서 <code>True</code>, 기준값 5에서 <code>False</code>였습니다. 같은 사용자 목록에서도 기준값 2에서는 <code>kim01</code>이 검토 대상이었고, 5에서는 대상이 없었습니다. 숫자 필터는 <code>[4, 5]</code>와 <code>[]</code>를 각각 반환했습니다.</p>
+                <p>F2는 화면에 <code>합계 5</code>를 출력했고, <code>report.txt</code>에도 같은 문자열이 기록됐습니다. 계산을 함수로 분리해 반환값을 출력과 파일 쓰기에 재사용했습니다. 터미널에서는 파일을 저장한 뒤 <code>cat</code>으로 로그 내용이 출력되는 것을 확인했습니다.</p>
               </div>
             </article>
           </div>
 
           <p class="note">
+            다음 실습에서는 <code>[2, 3, 4]</code>와 <code>[-1, 0, 3]</code>으로 필터의 경계값을 확인하고,
+            <code>summarize()</code>의 입력을 바꿔 파일 내용을 비교합니다.
+            <code>cat</code> 출력이 비어 있으면 파일 크기를 확인하고, 다른 <code>grep</code> 옵션도 실습합니다.
+          </p>
+          <p class="note">
             <a href="https://github.com/wjddncjf/security-agent-toolkit/blob/main/docs/2026-11-05.md"
                target="_blank" rel="noopener noreferrer">
-              GitHub에서 11월 5일 Python 실습 확인하기
+              11월 5일 학습일지
             </a>
+            · <a href="https://github.com/wjddncjf/security-agent-toolkit/blob/main/agent_core/assignment_10_f2.py">F2 코드</a>
+            · <a href="https://github.com/wjddncjf/security-agent-toolkit/blob/main/report.txt">실행 결과</a>
           </p>
         </article>
 
@@ -687,11 +696,13 @@
           <article class="timeline-item">
             <time datetime="2026-11-05">2026.11.05</time>
             <div>
-              <strong>Python 기본 매개변수와 함수 결과 저장</strong>
+              <strong>Python 함수 반환값 저장과 터미널 로그 검색</strong>
               <p>
                 기본 기준값과 전달한 기준값 비교 ·
                 <code>Counter</code>로 사용자별 실패 횟수 집계 ·
-                빈 리스트 처리 · 함수 반환값을 <code>report.txt</code>에 저장 ·
+                빈 리스트 처리 · <code>summarize([2, 3])</code>의 반환값 출력 및 <code>report.txt</code> 저장 ·
+                <code>cat</code>과 <code>ls -l</code>로 파일 확인 ·
+                <code>grep -n</code>과 <code>grep -c</code>로 일치하는 줄의 번호와 개수 확인 ·
                 위 STAR 사례 참고
               </p>
             </div>
